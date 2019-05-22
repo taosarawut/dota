@@ -1,0 +1,11 @@
+<ion-content *ngFor = "let item of dataList">
+  <form novalidate #myForm="ngForm" (ngSubmit)="edit(myForm.value)">
+  <ion-input type="text" ngModel name="hero_name"[(ngModel)]="item.hero_name" placeholder="Enter Input"></ion-input>
+
+<ion-input  type="text" ngModel name="hero_status" [(ngModel)]="item.hero_status"placeholder="Enter Input"></ion-input>
+
+<ion-input  type="text" ngModel name="hero_dmg" [(ngModel)]="item.hero_dmg"placeholder="Enter Input"></ion-input>
+
+<ion-button type="submit" expand="full">save</ion-button>
+</form>
+</ion-content>

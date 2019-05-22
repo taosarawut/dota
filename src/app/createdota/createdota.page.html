@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="add-circle"></ion-icon>เพิ่มข้อมูล</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <form novalidate #myForm="ngForm" (ngSubmit)="insert(myForm.value)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>เพิ่มข้อมูล</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="hero_name" type="text" placeholder="ชื่อฮีโร่" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="hero_status" type="text" placeholder="สถานะฮีโร่" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="hero_dmg" type="text" placeholder="พลังโจมตี" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="medium" type="submit"  expand="block">บันทึก</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

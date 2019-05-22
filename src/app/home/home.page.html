@@ -1,0 +1,34 @@
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-title>
+        <ion-icon name="home"></ion-icon>
+      ข้อมูล
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <br>
+  <div padding-horizontal>
+    <div class="cen" >
+      <ion-button  (click)="Add()" shape="round" size="midium" type="submit">เพิ่ม</ion-button>
+    </div>
+  </div>
+  <ion-card *ngFor="let item of dataList"color="success">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="7">
+              ชื่อฮีโร่: {{item.hero_name}}<br>
+              ฮีโร่สถานะ: {{item.hero_status}}<br>
+              สร้างความเสียหาย: {{item.hero_dmg}}<br>
+              
+          </ion-col>
+          <ion-col >
+            <ion-button shape="round" (click)="edit(item.hero_id)" size="small" type="submit">Edit</ion-button>
+            <ion-button shape="round" (click)="Delete(item.hero_id)" size="small" type="submit">Delete</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
